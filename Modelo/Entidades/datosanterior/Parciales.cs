@@ -374,7 +374,7 @@ namespace ModeloDB
             {
                 this.objetoMes = value;
                 if (value == null) this.mes = 0;
-                else this.mes = value.Id;
+                else this.mes = value.Id
 
             }
         }
