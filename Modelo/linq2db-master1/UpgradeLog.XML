@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="linq2db">
+</Property><Property Name="Archivo de la solución" Value="C:\sistema\PODE\SISTEMAS\Moro\Modelo\linq2db-master\linq2db.sln">
+</Property><Property Name="Date" Value="sábado, 13 de diciembre de 2014">
+</Property><Property Name="Time" Value="14:55">
+</Property></Properties><Event ErrorLevel="0" Project="LinqToDB" Source="Source\LinqToDB.csproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="LinqToDB" Source="Source\LinqToDB.csproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="0" Project="Tests" Source="Tests\Linq\Tests.csproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="Tests" Source="Tests\Linq\Tests.csproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="0" Project="Tests.Model" Source="Tests\Model\Tests.Model.csproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="Tests.Model" Source="Tests\Model\Tests.Model.csproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="0" Project="Tests.VisualBasic" Source="Tests\VisualBasic\Tests.VisualBasic.vbproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="Tests.VisualBasic" Source="Tests\VisualBasic\Tests.VisualBasic.vbproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="0" Project="LinqToDB.Silverlight.5" Source="Source\LinqToDB.Silverlight.5.csproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="LinqToDB.Silverlight.5" Source="Source\LinqToDB.Silverlight.5.csproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="0" Project="LinqToDB.WindowsStore" Source="Source\LinqToDB.WindowsStore.csproj" Description="El archivo de proyecto no requiere conversión.">
+</Event><Event ErrorLevel="3" Project="LinqToDB.WindowsStore" Source="Source\LinqToDB.WindowsStore.csproj" Description="No requiere conversión">
+</Event><Event ErrorLevel="2" Project="LinqToDB.Silverlight.5" Source="Source\LinqToDB.Silverlight.5.csproj" Description="No se puede leer el archivo de proyecto 'LinqToDB.Silverlight.5.csproj'. &#xA;C:\sistema\PODE\SISTEMAS\Moro\Modelo\linq2db-master\Source\LinqToDB.Silverlight.5.csproj(291,3): No se encuentra el proyecto importado &quot;C:\Program Files (x86)\MSBuild\Microsoft\Silverlight\v5.0\Microsoft.Silverlight.CSharp.targets&quot;. Asegúrese de que la ruta de acceso de la declaración &lt;Import&gt; es correcta y de que el archivo se encuentra en el disco.">
+</Event><Event ErrorLevel="2" Project="LinqToDB.WindowsStore" Source="Source\LinqToDB.WindowsStore.csproj" Description="No se puede abrir el archivo de proyecto 'C:\sistema\PODE\SISTEMAS\Moro\Modelo\linq2db-master\Source\LinqToDB.WindowsStore.csproj'.&#xA;&#xA;El tipo de proyecto no es compatible con esta instalación.">
+</Event><Event ErrorLevel="0" Project="" Source="linq2db.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="linq2db.sln" Description="Converted">
+</Event></UpgradeLog>

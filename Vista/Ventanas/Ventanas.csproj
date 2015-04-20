@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2526B0D2-F188-4931-966A-C01B39CD057A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsApp</RootNamespace>
+    <AssemblyName>Ventanas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\10.100.5.11\c%24\solverfinpublic\publicacion\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\25.92.143.78\solverfinpublic\publicacion\</UpdateUrl>
+    <ProductName>Ingarsoft Contable</ProductName>
+    <PublisherName>Ingarsoft</PublisherName>
+    <SuiteName>IASSoft</SuiteName>
+    <ApplicationRevision>200</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F828E87A83996D9BCB36E19373E484877B491B9C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Ventanas_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BindingListView">
+      <HintPath>..\..\Dll\BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.7.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MotorPostgreSql">
+      <HintPath>..\..\Dll\MotorPostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busquedas\BusquedaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\BusquedaClientes.Designer.cs">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\BusquedaContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\BusquedaContables.Designer.cs">
+      <DependentUpon>BusquedaContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios.Designer.cs">
+      <DependentUpon>Inventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contables1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contables1.Designer.cs">
+      <DependentUpon>Contables1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controladores\AsignacionCr.cs" />
+    <Compile Include="Controladores\BuscarListaCr.cs" />
+    <Compile Include="Controladores\ClienteCr.cs" />
+    <Compile Include="Controladores\ContableCr.cs" />
+    <Compile Include="Controladores\GestionMaestrasCr.cs" />
+    <Compile Include="Controladores\VentanaPrincipalCr.cs" />
+    <Compile Include="ControlesUsuario\BotonBQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\BotonBQ.Designer.cs">
+      <DependentUpon>BotonBQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\CabeceraContables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\CabeceraContables.Designer.cs">
+      <DependentUpon>CabeceraContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieMenus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieMenus.Designer.cs">
+      <DependentUpon>PieMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieDetalles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieDetalles.Designer.cs">
+      <DependentUpon>PieDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesLinq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesLinq.Designer.cs">
+      <DependentUpon>ClientesLinq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieSucursales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\PieSucursales.Designer.cs">
+      <DependentUpon>PieSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contables.Designer.cs">
+      <DependentUpon>Contables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ediciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ediciones.Designer.cs">
+      <DependentUpon>Ediciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Copia de Form1W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Copia de Form1W.Designer.cs">
+      <DependentUpon>Copia de Form1W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asignaciones.Designer.cs">
+      <DependentUpon>Asignaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\CambioClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrumental\CambioClave.Designer.cs">
+      <DependentUpon>CambioClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\ColeccionControl.cs" />
+    <Compile Include="ControlesUsuario\ConveniosPagos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ConveniosPagos.Designer.cs">
+      <DependentUpon>ConveniosPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\Impresiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrumental\Impresiones.Designer.cs">
+      <DependentUpon>Impresiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\ReporteDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrumental\ReporteDocumentos.Designer.cs">
+      <DependentUpon>ReporteDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrumental\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumental\_General.cs" />
+    <Compile Include="Maestras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestras.Designer.cs">
+      <DependentUpon>Maestras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ReporteGenerico.cs" />
+    <Compile Include="SeccionesConf\SeccionVentanas.cs" />
+    <Compile Include="SeccionesConf\VentanaSettings.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="OrdenesPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesPedido.Designer.cs">
+      <DependentUpon>OrdenesPedido.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Busquedas\BusquedaClientes.resx">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\BusquedaContables.resx">
+      <DependentUpon>BusquedaContables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios.resx">
+      <DependentUpon>Inventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contables1.resx">
+      <DependentUpon>Contables1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\BotonBQ.resx">
+      <DependentUpon>BotonBQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\CabeceraContables.resx">
+      <DependentUpon>CabeceraContables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\PieMenus.resx">
+      <DependentUpon>PieMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\PieDetalles.resx">
+      <DependentUpon>PieDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesLinq.resx">
+      <DependentUpon>ClientesLinq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\PieSucursales.resx">
+      <DependentUpon>PieSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contables.resx">
+      <DependentUpon>Contables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ediciones.resx">
+      <DependentUpon>Ediciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copia de Form1W.resx">
+      <DependentUpon>Copia de Form1W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asignaciones.resx">
+      <DependentUpon>Asignaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrumental\CambioClave.resx">
+      <DependentUpon>CambioClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ConveniosPagos.resx">
+      <DependentUpon>ConveniosPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrumental\Impresiones.resx">
+      <DependentUpon>Impresiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrumental\ReporteDocumentos.resx">
+      <DependentUpon>ReporteDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrumental\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestras.resx">
+      <DependentUpon>Maestras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ClientesRp.rdlc" />
+    <EmbeddedResource Include="Reportes\ContablesRp.rdlc" />
+    <EmbeddedResource Include="Reportes\ListaContablesRp.rdlc" />
+    <EmbeddedResource Include="OrdenesPedido.resx">
+      <DependentUpon>OrdenesPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteGenerico.rdlc" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ModeloDB.contable.datasource" />
+    <None Include="Properties\DataSources\Proveedores.Colecciones.ClienteCl.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevComponents.DotNetBar2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Mono.Security">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Npgsql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\contrato.doc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conectar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\contrato.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Borrador.txt" />
+    <None Include="Resources\no.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Llave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contable.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modelo\Delegados\Delegados.csproj">
+      <Project>{7E85865D-6117-468B-B855-59959F71399C}</Project>
+      <Name>Delegados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modelo\Entidades\Entidades.csproj">
+      <Project>{74C17440-41BD-43BE-A11B-6E2BA579C4F3}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modelo\Estructura\Estructura.csproj">
+      <Project>{731AE56E-15E0-43FE-AE06-5A25236AA4C6}</Project>
+      <Name>Estructura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modelo\Proveedores\Proveedores.csproj">
+      <Project>{8DAB9A33-77B0-4B3F-A1A9-E17AEEF9E525}</Project>
+      <Name>Proveedores</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,418 @@
+﻿static MemberExpression NestedExpressionProperty(Expression expression, string propertyName)
+        {
+            string[] parts = propertyName.Split('.');
+            int partsL = parts.Length;
+
+            return (partsL > 1)
+                ?
+                Expression.Property(
+                    NestedExpressionProperty(
+                        expression,
+                        parts.Take(partsL - 1)
+                            .Aggregate((a, i) => a + "." + i)
+                    ),
+                    parts[partsL - 1])
+                :
+                Expression.Property(expression, propertyName);
+        }
+
+        static Expression<Func<TSource, bool>> AllDatesHavePassed<TSource>(Dictionary<string, Entidades.ValorParametro> parametros)
+        {
+            var type = typeof(TSource);
+            var pe = Expression.Parameter(type, "p");
+
+            Expression filterExpression = null;
+
+            foreach (var item in parametros)
+            {
+                //dates = type.GetProperties()
+                //.Where(p => p.Name.Equals(dividido[0])).First();
+
+                Expression dateCap = Expression.Constant(item.Value);
+                Expression selectLeft = null;
+                Expression selectRight = null;
+                //if (dates.Length > 0)
+                //    foreach (var date in dates)
+                {
+                    //Expression left = Expression.Property(pe, dates.Name);
+                    Expression left = NestedExpressionProperty(pe, item.Key);
+
+                    Expression comparison = null;
+
+                    switch (((Entidades.ValorParametro)item.Value).Expresion)
+                    {
+                            
+                        case ExpressionType.Add:
+                            break;
+                        case ExpressionType.AddAssign:
+                            break;
+                        case ExpressionType.AddAssignChecked:
+                            break;
+                        case ExpressionType.AddChecked:
+                            break;
+                        case ExpressionType.And:
+                            break;
+                        case ExpressionType.AndAlso:
+                            break;
+                        case ExpressionType.AndAssign:
+                            break;
+                        case ExpressionType.ArrayIndex:
+                            break;
+                        case ExpressionType.ArrayLength:
+                            break;
+                        case ExpressionType.Assign:
+                            break;
+                        case ExpressionType.Block:
+                            break;
+                        case ExpressionType.Call:
+                            break;
+                        case ExpressionType.Coalesce:
+                            break;
+                        case ExpressionType.Conditional:
+                            break;
+                        case ExpressionType.Constant:
+                            break;
+                        case ExpressionType.Convert:
+                            break;
+                        case ExpressionType.ConvertChecked:
+                            break;
+                        case ExpressionType.DebugInfo:
+                            break;
+                        case ExpressionType.Decrement:
+                            break;
+                        case ExpressionType.Default:
+                            break;
+                        case ExpressionType.Divide:
+                            break;
+                        case ExpressionType.DivideAssign:
+                            break;
+                        case ExpressionType.Dynamic:
+                            break;
+                        case ExpressionType.Equal:
+                            comparison = Expression.Equal(left, dateCap);
+                            break;
+                        case ExpressionType.ExclusiveOr:
+                            break;
+                        case ExpressionType.ExclusiveOrAssign:
+                            break;
+                        case ExpressionType.Extension:
+                            break;
+                        case ExpressionType.Goto:
+                            break;
+                        case ExpressionType.GreaterThan:
+                            comparison = Expression.GreaterThan(left, dateCap);
+                            break;
+                        case ExpressionType.GreaterThanOrEqual:
+                            comparison = Expression.GreaterThanOrEqual(left, dateCap);
+                            break;
+                        case ExpressionType.Increment:
+                            break;
+                        case ExpressionType.Index:
+                            break;
+                        case ExpressionType.Invoke:
+                            break;
+                        case ExpressionType.IsFalse:
+                            break;
+                        case ExpressionType.IsTrue:
+                            break;
+                        case ExpressionType.Label:
+                            break;
+                        case ExpressionType.Lambda:
+                            break;
+                        case ExpressionType.LeftShift:
+                            break;
+                        case ExpressionType.LeftShiftAssign:
+                            break;
+                        case ExpressionType.LessThan:
+                            comparison = Expression.LessThan(left, dateCap);
+                            break;
+                        case ExpressionType.LessThanOrEqual:
+                            comparison = Expression.LessThanOrEqual(left, dateCap);
+                            break;
+                        case ExpressionType.ListInit:
+                            break;
+                        case ExpressionType.Loop:
+                            break;
+                        case ExpressionType.MemberAccess:
+                            break;
+                        case ExpressionType.MemberInit:
+                            break;
+                        case ExpressionType.Modulo:
+                            break;
+                        case ExpressionType.ModuloAssign:
+                            break;
+                        case ExpressionType.Multiply:
+                            break;
+                        case ExpressionType.MultiplyAssign:
+                            break;
+                        case ExpressionType.MultiplyAssignChecked:
+                            break;
+                        case ExpressionType.MultiplyChecked:
+                            break;
+                        case ExpressionType.Negate:
+                            break;
+                        case ExpressionType.NegateChecked:
+                            break;
+                        case ExpressionType.New:
+                            break;
+                        case ExpressionType.NewArrayBounds:
+                            break;
+                        case ExpressionType.NewArrayInit:
+                            break;
+                        case ExpressionType.Not:
+                            break;
+                        case ExpressionType.NotEqual:
+                            comparison = Expression.NotEqual(left, dateCap);
+                            break;
+                        case ExpressionType.OnesComplement:
+                            break;
+                        case ExpressionType.Or:
+                            break;
+                        case ExpressionType.OrAssign:
+                            break;
+                        case ExpressionType.OrElse:
+                            break;
+                        case ExpressionType.Parameter:
+                            break;
+                        case ExpressionType.PostDecrementAssign:
+                            break;
+                        case ExpressionType.PostIncrementAssign:
+                            break;
+                        case ExpressionType.Power:
+                            break;
+                        case ExpressionType.PowerAssign:
+                            break;
+                        case ExpressionType.PreDecrementAssign:
+                            break;
+                        case ExpressionType.PreIncrementAssign:
+                            break;
+                        case ExpressionType.Quote:
+                            break;
+                        case ExpressionType.RightShift:
+                            break;
+                        case ExpressionType.RightShiftAssign:
+                            break;
+                        case ExpressionType.RuntimeVariables:
+                            break;
+                        case ExpressionType.Subtract:
+                            break;
+                        case ExpressionType.SubtractAssign:
+                            break;
+                        case ExpressionType.SubtractAssignChecked:
+                            break;
+                        case ExpressionType.SubtractChecked:
+                            break;
+                        case ExpressionType.Switch:
+                            break;
+                        case ExpressionType.Throw:
+                            break;
+                        case ExpressionType.Try:
+                            break;
+                        case ExpressionType.TypeAs:
+                            break;
+                        case ExpressionType.TypeEqual:
+                            break;
+                        case ExpressionType.TypeIs:
+                            break;
+                        case ExpressionType.UnaryPlus:
+                            break;
+                        case ExpressionType.Unbox:
+                            break;
+                        default:
+                            break;
+                    }
+                    
+
+                    if (selectLeft == null)
+                    {
+                        selectLeft = comparison;
+                        filterExpression = selectLeft;
+                        continue;
+                    }
+                    if (selectRight == null)
+                    {
+                        selectRight = comparison;
+                        filterExpression =
+                            Expression.AndAlso(selectLeft, selectRight);
+                        continue;
+                    }
+                    filterExpression = Expression.AndAlso(filterExpression, comparison);
+                }
+            }
+            return Expression.Lambda<Func<TSource, bool>>(filterExpression, pe);
+        }
+
+
+//[System.Diagnostics.DebuggerHidden]
+        public static int BorrarLista(this object Obj)
+        {
+            int i = 0; int x = 0;
+            IList lista = Obj as IList;
+
+            //List<object> lista = ((List<Object>)Obj);
+            if (lista.Count == 0)
+                return 0;
+            Type tipoEntidad = lista[0].GetType();
+            //OBTENEMOS EL METODO GENERICO TOLIST PARA OBTENER LA LISTA DEL BINDINGLIST (EJECUCION BINDINGLIST.TOLIST())
+            var castItems = CastMethod.MakeGenericMethod(new Type[] { tipoEntidad }).Invoke(null, new object[] { Obj });
+            var list = ToListMethod.MakeGenericMethod(new Type[] { tipoEntidad }).Invoke(null, new object[] { castItems });
+
+            using (ispDB db = new ispDB())
+            {
+                try
+                {
+                    db.BeginTransaction();
+
+                    //ELIMINAR()
+                    //OBTENEMOS EL METODO 'ELIMINAR()' DEL CONTEXTO PARA BORRAR LOS ITEMS DE LA LISTA
+                    MethodInfo metodoInfo = db.GetType().GetMethod("Eliminar", BindingFlags.Instance | BindingFlags.Public);
+                    //METODO GENERICO PARA ELIMINAR OBJETOS
+                    metodoInfo = metodoInfo.MakeGenericMethod(new Type[] { tipoEntidad });
+                    //CREAMOS UN OBJETO ACCION QUE EJECUTARÁ EL METODO 'ELIMINAR()' DENTRO DEL FOREACH DE LA LISTA
+                    Action<object> addDelegado = o =>
+                    {
+                        try
+                        {
+                            x = (int)metodoInfo.Invoke(db, new[] { o });
+                            if (i == 0)
+                                i = x;
+                        }
+                        catch (TargetInvocationException ex)
+                        {
+                            throw new Exception(string.Format("Objeto {0}\n{1}", o.ToString(), ex.InnerException.Message), ex.InnerException); // ex now stores the original exception
+                        }
+                    };
+
+                    //CREAMOS LA INSTANCIA DE LA ACCION Y OBTENEMOS EL METODO 'DO()' DEL MISMO
+                    object adapter = Activator.CreateInstance(typeof(Adapter<>).MakeGenericType(tipoEntidad), addDelegado);
+                    MethodInfo metodoDo = adapter.GetType().GetMethod("Do");
+                    //CREAMOS EL DELEGADO A PARTIR DEL OBJETO ACCION PARA EL BORRADO DE OBJETOS
+                    Type tipoAccion = typeof(Action<>).MakeGenericType(tipoEntidad);
+                    Delegate adaptadorDelegado = Delegate.CreateDelegate(tipoAccion, adapter, metodoDo);
+                    //OBTENEMOS EL METODO 'FOREACH()' DE LA LISTA GENERICA (LIST<>) Y LO EJECUTAMOS PARA AGREGAR LOS ITEMS AL BINDINGLIST
+                    MethodInfo foreachMethod = lista.GetType().GetMethod("ForEach");
+                    foreachMethod.Invoke(lista, new object[] { adaptadorDelegado });
+
+                    db.CommitTransaction();
+                }
+                catch (Exception)
+                {
+                    db.RollbackTransaction();
+                    throw;
+                }
+            }
+            return i;
+        }
+
+	public static class PredicateBuilder
+    {
+        public static Expression<Func<T, bool>> True<T>() { return f => true; }
+        public static Expression<Func<T, bool>> False<T>() { return f => false; }
+        public static Expression<Func<T, bool>> True<T>(IQueryable<T> query) { return f => true; }
+        public static Expression<Func<T, bool>> False<T>(IQueryable<T> query) { return f => false; }
+
+        public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2)
+        {
+            var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
+            return Expression.Lambda<Func<T, bool>>(Expression.OrElse(expr1.Body, invokedExpr), expr1.Parameters);
+        }
+
+        public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1,
+                                   Expression<Func<T, bool>> expr2)
+        {
+            var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
+            return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
+        }
+    }
+
+
+	//i = db.usuarios.GroupBy(x => Sql.GroupBy.None, (idx, g) => g.Max(y => y.id)).Single();
+
+
+
+	using (ispDB db = new ispDB())
+            {
+                //var lista = (from m in db.perfiles.DefaultIfEmpty()
+                //              join p in db.usuariosperfiles on m.id equals p.idperfil
+                //              into pm
+                //              from a in pm.DefaultIfEmpty()
+                //              where a.idusuario == 1 || a.idusuario == null
+                //              orderby m.descripcion
+                //              select new usuarioperfil()
+                //              {
+                //                  fkperfile = m,
+                //                  idusuario = 1,
+                //                  idperfil = m.id,
+                //                  Asignado = (a.idperfil == null ? false : true)
+                //              }).ToList();
+
+                //var lista1 = (from m in db.menus
+                //              join p in db.perfilesmenus on m.id equals p.idmenu
+                //              into pm 
+                //              from a in pm.DefaultIfEmpty()
+                //              where a.idperfil == 1 || a.idperfil == null
+                //              orderby m.nombre
+                //              select new perfilmenu()
+                //              {
+                //                  fkmenu = m,
+                //                  editable = (a.editable == null ? false : a.editable),
+                //                  idperfil = 1,
+                //                  idmenu = m.id,
+                //                  Asignado = (a.idmenu == null ? false : true)
+                //              }).ToList();
+
+                var lista = (from m in db.menus
+                             from p in db.perfilesmenus
+                             .Where(q=> q.idmenu==m.id && (q.idperfil == 1 || q.idperfil == null)).DefaultIfEmpty()
+                             where p.idperfil == 1
+                             select new perfilmenu()
+                              {
+                                  fkmenu = m,
+                                  editable = (p.editable == null ? false : p.editable),
+                                  idperfil = 1,
+                                  idmenu = m.id,
+                                  Asignado = (p.idmenu == null ? false : true)
+                              }).ToList();
+                
+                string ax = db.LastQuery;
+            }
+
+
+
+//EXPRESIONES DINAMICAS
+
+[System.Diagnostics.DebuggerHidden]
+        private static Func<T, Object> GetExpression<T>(String sortby)
+        {
+            var param = Expression.Parameter(typeof(T));
+            var sortExpression = Expression.Lambda<Func<T, Object>>(
+                Expression.Convert(Expression.Property(param, sortby), typeof(Object)), param);
+            return sortExpression.Compile();
+        }
+
+
+		
+
+        [System.Diagnostics.DebuggerHidden]
+        private static T SetValor<T, V>(this T objeto, string campo, V valor) where T : Instrumental1
+        {
+            var tipo = typeof(T);
+            var prop = tipo.GetProperty(campo);
+            if (object.Equals(prop.GetValue(objeto, null), Convert.ChangeType(0, prop.PropertyType)))
+                //prop.SetValue(objeto, Convert.ChangeType(valor, prop.PropertyType), null);
+                prop.SetValue(objeto, valor, null);
+            return objeto;
+        }
+
+        public static Expression<Func<T, V?>> ToNullableExpression<T, V>(this Expression<Func<T, V>> source) where V : struct
+        {
+            if (source == null)
+                throw new ArgumentNullException("source");
+
+            var body = Expression.Convert(source.Body, typeof(V?));
+            var parameters = source.Parameters;
+
+            return Expression.Lambda<Func<T, V?>>(body, parameters);
+        }
+
+        

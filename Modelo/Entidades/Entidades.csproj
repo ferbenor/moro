@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74C17440-41BD-43BE-A11B-6E2BA579C4F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BindingListView">
+      <HintPath>..\..\Dll\BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Estructura, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\Estructura.dll</HintPath>
+    </Reference>
+    <Reference Include="linq2db, Version=1.0.2.0, Culture=neutral, PublicKeyToken=f19f8aed7feff67e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\linq2db.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="datosanterior\ActividadEconomica.cs" />
+    <Compile Include="datosanterior\ActividadEconomicaAux.cs" />
+    <Compile Include="datosanterior\Barrio.cs" />
+    <Compile Include="datosanterior\Asignacion.cs" />
+    <Compile Include="datosanterior\Banco.cs" />
+    <Compile Include="datosanterior\Cliente.cs" />
+    <Compile Include="datosanterior\Contable.cs" />
+    <Compile Include="datosanterior\ConvenioPago.cs" />
+    <Compile Include="datosanterior\DetalleVenta.cs" />
+    <Compile Include="datosanterior\EstadoFactura.cs" />
+    <Compile Include="datosanterior\FormaPago.cs" />
+    <Compile Include="datosanterior\IdentificadorPago.cs" />
+    <Compile Include="EstadoCivil.cs" />
+    <Compile Include="Genero.cs" />
+    <Compile Include="Instrumental\Copia de General.cs" />
+    <Compile Include="datosanterior\Venta.cs" />
+    <Compile Include="datosanterior\Parciales.cs" />
+    <Compile Include="datosanterior\MoroData.Modelo.cs" />
+    <Compile Include="datosanterior\Pago.cs" />
+    <Compile Include="datosanterior\Producto.cs" />
+    <Compile Include="datosanterior\DetalleOrdenPedido.cs" />
+    <Compile Include="datosanterior\EstadoOrdenPedido.cs" />
+    <Compile Include="datosanterior\UnidadMedida.cs" />
+    <Compile Include="datosanterior\Documento.cs" />
+    <Compile Include="datosanterior\Enumerado.cs" />
+    <Compile Include="datosanterior\ItemInventario.cs" />
+    <Compile Include="datosanterior\OperadoraTelefonia.cs" />
+    <Compile Include="datosanterior\ParametroGeneral.cs" />
+    <Compile Include="datosanterior\Empresa.cs" />
+    <Compile Include="datosanterior\EstadoCivil.cs" />
+    <Compile Include="Instrumental\SortBindingList.cs" />
+    <Compile Include="datosanterior\Mes.cs" />
+    <Compile Include="datosanterior\NivelEstudio.cs" />
+    <Compile Include="datosanterior\Periodo.cs" />
+    <Compile Include="datosanterior\DetalleContable.cs" />
+    <Compile Include="datosanterior\Persona.cs" />
+    <Compile Include="datosanterior\Profesion.cs" />
+    <Compile Include="datosanterior\Rubro.cs" />
+    <Compile Include="datosanterior\SectorEconomicoAux.cs" />
+    <Compile Include="datosanterior\TipoContable.cs" />
+    <Compile Include="datosanterior\CuentaContable.cs" />
+    <Compile Include="datosanterior\CuentaContableAux.cs" />
+    <Compile Include="datosanterior\TipoDocumento.cs" />
+    <Compile Include="datosanterior\TipoCuenta.cs" />
+    <Compile Include="datosanterior\CuentaBanco.cs" />
+    <Compile Include="datosanterior\UsuarioSesionActiva.cs" />
+    <Compile Include="datosanterior\Usuario.cs" />
+    <Compile Include="Instrumental\General.cs" />
+    <Compile Include="datosanterior\EPersona.cs" />
+    <Compile Include="datosanterior\UsuarioPerfil.cs" />
+    <Compile Include="datosanterior\PerfilMenu.cs" />
+    <Compile Include="datosanterior\EstadoPersona.cs" />
+    <Compile Include="datosanterior\MenuSistemaAux.cs" />
+    <Compile Include="datosanterior\TipoSangre.cs" />
+    <Compile Include="datosanterior\Parroquia.cs" />
+    <Compile Include="datosanterior\Provincia.cs" />
+    <Compile Include="datosanterior\TipoPersona.cs" />
+    <Compile Include="datosanterior\Perfil.cs" />
+    <Compile Include="datosanterior\ImagenCombo.cs" />
+    <Compile Include="datosanterior\MenuSistema.cs" />
+    <Compile Include="datosanterior\Canton.cs" />
+    <Compile Include="datosanterior\Genero.cs" />
+    <Compile Include="Instrumental\Instrumental.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="datosanterior\OrdenPedido.cs" />
+    <Compile Include="TipoDocumento.cs" />
+    <Compile Include="_ispDb.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelo\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
